@@ -25,8 +25,6 @@ const calculateTotals = async (items: CartItem[]): Promise<{ subtotal: number, t
 const validateModifiers = (product: any, selectedModifiers?: Record<string, string>) => {
     const modifiers = product.modifiers || [];
     const selected = selectedModifiers || {};
-    console.log("modifiers", modifiers)
-    console.log("selectedModifiers", selectedModifiers)
 
     for (const mod of modifiers) {
         const values = selected[mod.id] || [];
