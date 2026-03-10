@@ -16,6 +16,7 @@ services:
       - "3002:3002"
     volumes:
       - ./restaurant-backend:/app
+      - /app/node_modules
     environment:
       DYNAMODB_ENDPOINT: "http://dynamodb:8000"
       AWS_REGION: "us-east-1"
