@@ -1,0 +1,253 @@
+.container {
+  padding: 2rem 1.5rem 5rem;
+  min-height: 100vh;
+}
+
+.inner {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleBox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.backLink {
+  color: var(--muted-foreground);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--primary);
+}
+
+.orderIdBadge {
+  font-size: 11px;
+  color: var(--primary);
+  background: rgba(245, 158, 11, 0.1);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-family: var(--font-mono, monospace);
+  font-weight: 800;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+/* Empty State */
+.emptyState {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--muted-foreground);
+  font-size: 14px;
+}
+
+/* Table */
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table th {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted-foreground);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background 0.15s ease;
+}
+
+.row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.row td {
+  padding: 1rem 1.25rem;
+  color: #cbd5e1;
+  vertical-align: middle;
+}
+
+.rowLatest td {
+  background: rgba(245, 158, 11, 0.03);
+}
+
+.rowExpanded {
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+.cellTime {
+  white-space: nowrap;
+  color: var(--muted-foreground) !important;
+  font-size: 12px;
+}
+
+.cellMono {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  color: var(--muted-foreground) !important;
+}
+
+/* Badges */
+.typeBadge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  white-space: nowrap;
+}
+
+.sourceBadge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+  font-family: var(--font-mono, monospace);
+}
+
+/* Expand Button */
+.expandBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--muted-foreground);
+  border-radius: 0.5rem;
+  padding: 5px 8px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: all 0.15s ease;
+}
+
+.expandBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Payload Row */
+.payloadRow td {
+  padding: 0 !important;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.payloadBox {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.payload {
+  margin: 0;
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  color: var(--primary);
+  line-height: 1.6;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* Load More */
+.loadMoreBtn {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.875rem 2.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  color: var(--muted-foreground);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.loadMoreBtn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.loadMoreBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Loading */
+.loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 0;
+  }
+
+  .table th,
+  .row td {
+    padding: 0.75rem 1rem;
+  }
+}

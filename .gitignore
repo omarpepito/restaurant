@@ -1,0 +1,29 @@
+# dependencies
+node_modules
+
+# environment
+.env
+.env.local
+
+# serverless
+.serverless
+
+# builds
+.build
+dist
+coverage
+
+# dynamodb local
+.dynamodb
+
+# logs
+npm-debug.log*
+yarn-error.log*
+
+# frontend builds
+.next
+out
+
+# OS
+.DS_Store
+Thumbs.db

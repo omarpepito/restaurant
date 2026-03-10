@@ -1,0 +1,402 @@
+.container {
+  padding: 2rem 1.5rem 5rem;
+  min-height: 100vh;
+}
+
+.inner {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.statusCard {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.iconContainer {
+  position: relative;
+}
+
+.iconGlow {
+  position: absolute;
+  inset: 0;
+  background: rgba(245, 158, 11, 0.2);
+  filter: blur(32px);
+  border-radius: 9999px;
+}
+
+.iconBox {
+  position: relative;
+  z-index: 10;
+  background: #0f172a;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.headerInfo {
+  flex: 1;
+}
+
+.orderBadge {
+  font-size: 0.625rem;
+  color: var(--primary);
+  background: rgba(245, 158, 11, 0.1);
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.5rem;
+  font-weight: 800;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.statusTitle {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  margin: 0 0 0.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.statusDesc {
+  color: var(--muted-foreground);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.totalAmount {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+/* Receipt Styles */
+.receiptContainer {
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.receiptHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.receiptTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+}
+
+.receiptItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.receiptItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.itemLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.itemMain {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.itemQty {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 0.875rem;
+}
+
+.itemName {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.itemModifiers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding-left: 1.5rem;
+}
+
+.modBadge {
+  font-size: 9px;
+  color: var(--muted-foreground);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.itemPrice {
+  font-family: var(--font-mono, monospace);
+  color: #fff;
+  font-weight: 600;
+}
+
+.receiptDivider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 1.5rem 0;
+}
+
+.receiptSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.receiptRow {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}
+
+.receiptTotal {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.totalHighlight {
+  color: var(--primary);
+}
+
+/* Timeline Styles */
+.timelineSection {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timelineHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.timelineTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+}
+
+.timelineTrail {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px solid var(--secondary);
+  margin-left: 1rem;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.itemDot {
+  position: absolute;
+  left: -37px;
+  top: 1.5rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  border: 4px solid #020617;
+}
+
+.dotActive {
+  background: var(--primary);
+  box-shadow: 0 0 12px var(--primary);
+}
+
+.dotInactive {
+  background: var(--secondary);
+}
+
+.eventCard {
+  overflow: hidden;
+}
+
+.eventButton {
+  width: 100%;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  text-align: left;
+}
+
+.eventInfo {
+  flex: 1;
+}
+
+.eventTime {
+  font-size: 10px;
+  color: var(--muted-foreground);
+  font-weight: 800;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.eventType {
+  font-weight: 800;
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+}
+
+.eventMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.eventId {
+  font-size: 10px;
+  padding: 2px 8px;
+  background: var(--secondary);
+  color: var(--muted-foreground);
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.eventDetail {
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.detailPadding {
+  padding: 1.25rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.payload {
+  font-size: 12px;
+  color: var(--primary);
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin: 0;
+  font-family: var(--font-mono, monospace);
+}
+
+.detailFooter {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 10px;
+  color: var(--muted-foreground);
+}
+
+.loadMoreBtn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  color: var(--muted-foreground);
+  font-weight: 700;
+  font-size: 13px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.loadMoreBtn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.loadMoreBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Nav Actions */
+.navActions {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.backBtn {
+  padding: 0.75rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.backBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .statusCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .hideSm {
+    display: none;
+  }
+  
+  .navActions {
+    flex-direction: column;
+  }
+}

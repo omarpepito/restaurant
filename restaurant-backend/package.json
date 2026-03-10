@@ -1,0 +1,27 @@
+{
+  "name": "restaurant-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "start:docker": "node scripts/setup-db.js && node scripts/seed-products.js && serverless offline --host 0.0.0.0 --httpPort 3002 --lambdaPort 3003",
+    "dev": "serverless offline --host 0.0.0.0 --httpPort 3002 --lambdaPort 3003",
+    "dynamodb": "serverless dynamodb start"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.161",
+    "@types/node": "^20.19.37",
+    "@types/uuid": "^10.0.0",
+    "serverless": "^3.40.0",
+    "serverless-dynamodb-local": "^0.2.40",
+    "serverless-offline": "^13.9.0",
+    "serverless-plugin-typescript": "^2.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.1004.0",
+    "@aws-sdk/lib-dynamodb": "^3.1004.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "uuid": "^9.0.1"
+  }
+}

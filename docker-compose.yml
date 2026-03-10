@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  dynamodb:
+    image: amazon/dynamodb-local
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    command: "-jar DynamoDBLocal.jar -sharedDb"
+
+  backend:
+    build:
+      context: ./restaurant-backend
+    container_name: restaurant-backend
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./restaurant-backend:/app
+    environment:
+      DYNAMODB_ENDPOINT: "http://dynamodb:8000"
+      AWS_REGION: "us-east-1"
+      AWS_ACCESS_KEY_ID: "dummy"
+      AWS_SECRET_ACCESS_KEY: "dummy"
+    depends_on:
+      - dynamodb
+
+  frontend:
+    build:
+      context: ./restaurant-frontend
+    container_name: restaurant-frontend
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./restaurant-frontend:/app
+      - /app/node_modules
+      - /app/.next
+    command: npm run dev
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:3002/dev
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+      - NODE_ENV=development
+    depends_on:
+      - backend

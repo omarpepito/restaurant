@@ -1,0 +1,77 @@
+.container {
+  padding: 0 1.5rem 5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  margin: 0;
+  color: var(--primary);
+  background: linear-gradient(to right, #fbbf24, #d97706);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  max-width: 600px;
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.loadingContainer, .emptyContainer {
+  text-align: center;
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.emptyTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.emptyText {
+  color: var(--muted-foreground);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

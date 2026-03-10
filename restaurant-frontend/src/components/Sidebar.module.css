@@ -1,0 +1,132 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebarHeader {
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  background: var(--primary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoText {
+  font-weight: 900;
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.logoBistro {
+  color: var(--primary);
+}
+
+.navSection {
+  flex: 1;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+  border-radius: 0.75rem;
+  color: var(--muted-foreground);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+}
+
+.navItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.navItemActive {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--primary);
+}
+
+.navItemActive:hover {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--primary);
+}
+
+.sidebarFooter {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.userCard {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  background: var(--secondary);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 0.8125rem;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.userRole {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+}
