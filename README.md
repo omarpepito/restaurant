@@ -14,6 +14,11 @@ For **manual (non-Docker) instructions**, see the READMEs inside each project:
 
 ---
 
+## Clone repository
+```
+git clone https://github.com/omarpepito/restaurant.git
+
+```
 ## Prerequisites
 
 - **Node.js**: v20.x (LTS recommended) – only needed if you want to install dependencies on the host.
@@ -40,7 +45,7 @@ See each app’s README for details.
 
 ## Run the Full Stack with Docker Compose
 
-From the repo root (`sundevs`):
+From the repo root (`restaurant`):
 
 ```bash
 docker compose up --build
@@ -64,3 +69,6 @@ This will:
 docker compose down
 ```
 
+## Seed / Sample Data
+
+With Docker the products examples will be added to dynamoDB automatically
